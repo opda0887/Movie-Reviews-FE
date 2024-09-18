@@ -1,29 +1,34 @@
-import './App.css';
-import api from './api/axiosConfig';
-import { useState, useEffect } from 'react';
+import "./App.css";
+import api from "./api/axiosConfig";
+import { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 
+import { Layout } from "./components/Layout";
+import { Home } from "./components/home/Home";
 
 function App() {
-  
   const [movies, setMovies] = useState();
 
   const getMovies = async () => {
     try {
-      const response = await api.get('/api/v1/movies');
+      const response = await api.get("/api/v1/movies");
       setMovies(response.data);
-      console.log(response.data); // can be removed
     } catch (err) {
       console.error(err);
     }
-  }
+  };
 
   useEffect(() => {
     getMovies();
   }, []);
-  
+
   return (
     <div className="App">
-      
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
