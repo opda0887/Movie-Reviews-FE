@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    // help me to create a header component
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="/" style={{ color: "gold" }}>
