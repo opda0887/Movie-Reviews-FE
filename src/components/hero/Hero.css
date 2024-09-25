@@ -42,3 +42,48 @@
     color: white;
     align-items: center;
 }
+
+.movie-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.play-button-icon-container {
+    padding: 0px;
+    margin: 0px;
+    width: 150px;
+}
+
+.play-button-icon {
+    padding: 0px;
+    margin: 0px;
+    color: gold;
+    transition: 0.3s;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.play-button-icon:hover {
+    color: white;
+    font-size: 4rem;
+}
+
+/* Adapt on the smaller screen */
+@media only screen and (max-width: 800px) {
+    .movie-detail {
+        flex-direction: column;
+        align-items: center;
+        top: 50px;
+    }
+
+    .movie-buttons-container {
+        justify-content: center;
+    }
+
+    .play-button-icon-container {
+        display: flex;
+        justify-content: center;
+    }
+}
