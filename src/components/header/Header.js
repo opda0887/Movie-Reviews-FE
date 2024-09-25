@@ -13,16 +13,22 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-            <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: "100px" }} navbarScroll>
-                <NavLink to="/" className="nav-link">
-                Home
-                </NavLink>
-                <NavLink to="/watchlist" className="nav-link">
-                Watch List
-                </NavLink>
-            </Nav>
-            <Button variant="outline-info" className="me-2">Login</Button>
-            <Button variant="outline-info">Register</Button>
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <NavLink to="/" className="nav-link">
+              Home
+            </NavLink>
+            <NavLink to="/watchlist" className="nav-link">
+              Watch List
+            </NavLink>
+          </Nav>
+          <Button variant="outline-info" className="me-2">
+            Login
+          </Button>
+          <Button variant="outline-info">Register</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
